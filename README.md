@@ -23,7 +23,7 @@ Then we are ready for create our project. .(dot) means our project will create a
 ```bash
 django-admin startproject supershop .
 ```
-After create our project Now we can create many app under our project.
+After create our project Now we can create many app under our project. But before create new app we need to activate virtual environment.
 ```bash
 python manage.py startapp app_name
 ```
