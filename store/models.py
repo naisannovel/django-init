@@ -11,6 +11,7 @@ class Collection(models.Model):
 class Product(models.Model):
     # sku = models.CharField(max_length=255, primary_key=True)  # Now sku will be product primary key
     title = models.CharField(max_length=255)
+    slug = models.SlugField()
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     inventory = models.IntegerField()
@@ -32,6 +33,8 @@ class Customer(models.Model):
     phone = models.CharField(max_length=255)
     birth_date = models.DateField(null=True)
     membership = models.CharField(max_length=1, choices=MEMBERSHIP_CHOICES, default='B')
+    # class Meta:
+    #     db_table = "store_customers"    # our table name will change with this db_table name.
 
 
 class Order(models.Model):
