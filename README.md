@@ -35,3 +35,12 @@ For port define.
 ```bash
 python manage.py runserver 8000
 ```
+To see how many apps have not been migrated yet
+```bash
+python manage.py showmigrations
+```
+For migrate our app
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
